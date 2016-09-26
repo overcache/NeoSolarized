@@ -237,8 +237,9 @@ let colors_name = "NeoSolarized"
 " leave the hex values out entirely in that case and include only cterm colors)
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
-if has("termguicolors")
-    set termguicolors
+if has("termguicolors") && &termguicolors
+    " do NOT set this in colorscheme. it remain affect after change colorscheme.
+    " set termguicolors
     let s:vmode       = "gui"
     let s:base03      = "#002b36"
     let s:base02      = "#073642"
@@ -255,26 +256,28 @@ if has("termguicolors")
     let s:violet      = "#6c71c4"
     let s:blue        = "#268bd2"
     let s:cyan        = "#2aa198"
-    "let s:green       = "#859900" "original
     let s:green       = "#719e07" "experimental
+    "let s:green       = "#859900" "original
 else
+    " elseif g:solarized_termcolors == 256
     let s:vmode       = "cterm"
-    let s:base03      = "234"
-    let s:base02      = "235"
-    let s:base01      = "239"
-    let s:base00      = "240"
-    let s:base0       = "244"
-    let s:base1       = "245"
-    let s:base2       = "187"
-    let s:base3       = "230"
-    let s:yellow      = "136"
-    let s:orange      = "166"
-    let s:red         = "124"
-    let s:magenta     = "125"
-    let s:violet      = "61"
-    let s:blue        = "33"
-    let s:cyan        = "37"
-    let s:green       = "64"
+    let s:base03      = "8"
+    let s:base02      = "0"
+    let s:base01      = "10"
+    let s:base00      = "11"
+    let s:base0       = "12"
+    let s:base1       = "14"
+    let s:base2       = "7"
+    let s:base3       = "15"
+    let s:yellow      = "3"
+    let s:orange      = "9"
+    let s:red         = "1"
+    let s:magenta     = "5"
+    let s:violet      = "13"
+    let s:blue        = "4"
+    let s:cyan        = "6"
+    let s:green       = "2"
+
 endif
 "}}}
 " Formatting options and null values for passthrough effect "{{{
@@ -291,11 +294,12 @@ endif
 "}}}
 " Background value based on termtrans setting "{{{
 " ---------------------------------------------------------------------
-if (has("gui_running") || g:solarized_termtrans == 0)
+" if (has("gui_running") || g:solarized_termtrans == 0)
+" if has("termguicolors") && &termguicolors
     let s:back        = s:base03
-else
-    let s:back        = "NONE"
-endif
+" else
+    " let s:back        = "NONE"
+" endif
 "}}}
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
@@ -413,7 +417,8 @@ exe "let s:fmt_revb     = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'"
 exe "let s:fmt_revbb    = ' ".s:vmode."=NONE".s:r.s:bb.   " term=NONE".s:r.s:bb."'"
 exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:bb.s:u." term=NONE".s:r.s:bb.s:u."'"
 
-if has("gui_running")
+" if has("gui_running")
+if has("termguicolors") && &termguicolors
     exe "let s:sp_none      = ' guisp=".s:none   ."'"
     exe "let s:sp_back      = ' guisp=".s:back   ."'"
     exe "let s:sp_base03    = ' guisp=".s:base03 ."'"
@@ -543,12 +548,12 @@ exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
-if ( has("gui_running") || &t_Co > 8 )
+" if ( has("gui_running") || &t_Co > 8 )
     " exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_base00
     exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_none
-else
-    exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base00 .s:bg_base02
-endif
+" else
+    " exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base00 .s:bg_base02
+" endif
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
@@ -566,17 +571,17 @@ exe "hi! DiffChange"     .s:fmt_undr   .s:fg_yellow .s:bg_none   .s:sp_yellow
 exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! DiffText"       .s:fmt_undr   .s:fg_blue   .s:bg_none   .s:sp_blue
 else " normal
-    if has("gui_running")
+    " if has("gui_running")
 exe "hi! DiffAdd"        .s:fmt_bold   .s:fg_green  .s:bg_base02 .s:sp_green
 exe "hi! DiffChange"     .s:fmt_bold   .s:fg_yellow .s:bg_base02 .s:sp_yellow
 exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_base02
 exe "hi! DiffText"       .s:fmt_bold   .s:fg_blue   .s:bg_base02 .s:sp_blue
-    else
-exe "hi! DiffAdd"        .s:fmt_none   .s:fg_green  .s:bg_base02 .s:sp_green
-exe "hi! DiffChange"     .s:fmt_none   .s:fg_yellow .s:bg_base02 .s:sp_yellow
-exe "hi! DiffDelete"     .s:fmt_none   .s:fg_red    .s:bg_base02
-exe "hi! DiffText"       .s:fmt_none   .s:fg_blue   .s:bg_base02 .s:sp_blue
-    endif
+    " else
+" exe "hi! DiffAdd"        .s:fmt_none   .s:fg_green  .s:bg_base02 .s:sp_green
+" exe "hi! DiffChange"     .s:fmt_none   .s:fg_yellow .s:bg_base02 .s:sp_yellow
+" exe "hi! DiffDelete"     .s:fmt_none   .s:fg_red    .s:bg_base02
+" exe "hi! DiffText"       .s:fmt_none   .s:fg_blue   .s:bg_base02 .s:sp_blue
+    " endif
 endif
 exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0  .s:bg_none
 exe "hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none
