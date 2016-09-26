@@ -227,7 +227,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let colors_name = "solarized"
+let colors_name = "NeoSolarized"
 
 "}}}
 " GUI & CSApprox hexadecimal palettes"{{{
@@ -966,6 +966,14 @@ exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
+
+"}}}
+" perl highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! NeomakeErrorSign"          . s:fg_orange   .s:bg_none   .s:fmt_none
+exe "hi! NeomakeWarningSign"        . s:fg_yellow   .s:bg_none   .s:fmt_none
+exe "hi! NeomakeMessageSign"        . s:fg_cyan     .s:bg_none   .s:fmt_none
+exe "hi! NeomakeNeomakeInfoSign"    . s:fg_green    .s:bg_none   .s:fmt_none
 
 "}}}
 " Utility autocommand "{{{
