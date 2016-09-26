@@ -237,7 +237,8 @@ let colors_name = "NeoSolarized"
 " leave the hex values out entirely in that case and include only cterm colors)
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
-if has("gui_running")
+if has("termguicolors")
+    set termguicolors
     let s:vmode       = "gui"
     let s:base03      = "#002b36"
     let s:base02      = "#073642"
