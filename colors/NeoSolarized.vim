@@ -128,6 +128,7 @@
 " http://www.frexx.de/xterm-256-notes/"
 "
 " }}}
+
 " Environment Specific Overrides "{{{
 " Allow or disallow certain features based on current terminal emulator or 
 " environment.
@@ -155,6 +156,7 @@ else
 endif
 
 " }}}
+
 " Default option values"{{{
 " ---------------------------------------------------------------------
 " s:options_list is used to autogenerate a list of all non-default options 
@@ -220,6 +222,7 @@ call s:SetOption("hitrail",0)
 call s:SetOption("menu",1)
 
 "}}}
+
 " Colorscheme initialization "{{{
 " ---------------------------------------------------------------------
 hi clear
@@ -229,6 +232,7 @@ endif
 let colors_name = "NeoSolarized"
 
 "}}}
+
 " GUI & CSApprox hexadecimal palettes"{{{
 " ---------------------------------------------------------------------
 "
@@ -280,6 +284,7 @@ let colors_name = "NeoSolarized"
 
 " endif
 "}}}
+
 " Formatting options and null values for passthrough effect "{{{
 " ---------------------------------------------------------------------
     let s:gui_none        = "NONE"
@@ -291,6 +296,7 @@ let colors_name = "NeoSolarized"
     let s:ou              = ""
     let s:ob              = ""
 "}}}
+
 " Background value based on termtrans setting "{{{
 " ---------------------------------------------------------------------
 if (has("gui_running") || g:solarized_termtrans == 0)
@@ -302,6 +308,7 @@ else
     let s:term_back        = "NONE"
 endif
 "}}}
+
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
 if &background == "light"
@@ -337,6 +344,7 @@ if &background == "light"
     endif
 endif
 "}}}
+
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_contrast == "high"
@@ -359,6 +367,7 @@ if g:solarized_contrast == "low"
     let s:ou          = ",underline"
 endif
 "}}}
+
 " Overrides dependent on user specified values and environment "{{{
 " ---------------------------------------------------------------------
 if (g:solarized_bold == 0 || &t_Co == 8 )
@@ -381,6 +390,7 @@ else
     let s:i           = ",italic"
 endif
 "}}}
+
 " Highlighting primitives"{{{
 " ---------------------------------------------------------------------
 
@@ -482,6 +492,7 @@ else
 endif
 
 "}}}
+
 " Basic highlighting"{{{
 " ---------------------------------------------------------------------
 " note that link syntax to avoid duplicate configuration doesn't work with the
@@ -548,6 +559,7 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 "                        keywords TODO FIXME and XXX
 "
 "}}}
+
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
 if      (g:solarized_visibility=="high")
@@ -582,7 +594,9 @@ exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02 .s:fmt_revbb
-exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
+" Modified by iCyMind. remove underline for Folded group
+" exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
+exe "hi! Folded"         .s:fmt_bold   .s:fg_base0  .s:bg_base02  .s:sp_base03
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
 if      (g:solarized_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
@@ -628,6 +642,7 @@ hi! link lCursor Cursor
 exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base01
 
 "}}}
+
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
 "exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
@@ -655,11 +670,13 @@ exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blue   .s:bg_none
 exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blue   .s:bg_none
 exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
 "}}}
+
 " diff highlighting "{{{
 " ---------------------------------------------------------------------
 hi! link diffAdded Statement
 hi! link diffLine Identifier
 "}}}
+
 " git & gitcommit highlighting "{{{
 "git
 "exe "hi! gitDateHeader"
@@ -710,6 +727,7 @@ hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
 "exe "hi! gitcommitOverflow"
 "exe "hi! gitcommitBlank"
 " }}}
+"
 " html highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! htmlTag"           .s:fmt_none .s:fg_base01 .s:bg_none
@@ -720,6 +738,7 @@ exe "hi! htmlSpecialTagName".s:fmt_ital .s:fg_blue   .s:bg_none
 exe "hi! htmlArg"           .s:fmt_none .s:fg_base00 .s:bg_none
 exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
 "}}}
+
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
@@ -727,6 +746,7 @@ exe "hi! perlVarPlain"   . s:fg_yellow .s:bg_back   .s:fmt_none
 exe "hi! perlStatementFileDesc". s:fg_cyan.s:bg_back.s:fmt_none
 
 "}}}
+
 " tex highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! texStatement"   . s:fg_cyan   .s:bg_back   .s:fmt_none
@@ -735,6 +755,7 @@ exe "hi! texMathMatcher" . s:fg_yellow .s:bg_back   .s:fmt_none
 exe "hi! texMathMatcher" . s:fg_yellow .s:bg_back   .s:fmt_none
 exe "hi! texRefLabel"    . s:fg_yellow .s:bg_back   .s:fmt_none
 "}}}
+
 " ruby highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
@@ -759,6 +780,7 @@ exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
 "hi! link rubyClassVariable     Identifier
 "hi! link rubyConstant          Type
 "}}}
+
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File
@@ -801,6 +823,7 @@ exe "hi! hsNiceOperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi! hsniceoperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 
 "}}}
+
 " pandoc markdown syntax highlighting "{{{
 " ---------------------------------------------------------------------
 
@@ -923,6 +946,7 @@ exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
 hi! link pandocMetadataTitle             pandocMetadata
 
 "}}}
+
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! NeomakeErrorSign"          . s:fg_orange   .s:bg_none   .s:fmt_none
@@ -931,6 +955,7 @@ exe "hi! NeomakeMessageSign"        . s:fg_cyan     .s:bg_none   .s:fmt_none
 exe "hi! NeomakeNeomakeInfoSign"    . s:fg_green    .s:bg_none   .s:fmt_none
 
 "}}}
+
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
 " In cases where Solarized is initialized inside a terminal vim session and 
@@ -950,6 +975,7 @@ exe "hi! NeomakeNeomakeInfoSign"    . s:fg_green    .s:bg_none   .s:fmt_none
 "
 autocmd GUIEnter * if (has('gui_running')) | exe "colorscheme " . g:colors_name | endif
 "}}}
+
 " Highlight Trailing Space {{{
 " Experimental: Different highlight when on cursorline
 function! s:SolarizedHiTrail()
@@ -968,6 +994,7 @@ augroup SolarizedHiTrail
     endif
 augroup END
 " }}}
+
 " Menus "{{{
 " ---------------------------------------------------------------------
 " Turn off Solarized menu by including the following assignment in your .vimrc:
@@ -1051,4 +1078,30 @@ endfunction
 autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarized | else | call SolarizedMenu() | endif
 
 "}}}
-" vim:  set foldmethod=marker foldlevel=0:
+
+" License "{{{
+" ---------------------------------------------------------------------
+"
+" Copyright (c) 2011 Ethan Schoonover
+" Copyright (c) 2015 iCyMind
+"
+" Permission is hereby granted, free of charge, to any person obtaining a copy
+" of this software and associated documentation files (the "Software"), to deal
+" in the Software without restriction, including without limitation the rights
+" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+" copies of the Software, and to permit persons to whom the Software is
+" furnished to do so, subject to the following conditions:
+"
+" The above copyright notice and this permission notice shall be included in
+" all copies or substantial portions of the Software.
+"
+" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+" THE SOFTWARE.
+"
+" vim:foldmethod=marker:foldlevel=0
+"}}}
