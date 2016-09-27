@@ -1,6 +1,6 @@
 # NeoSolarized
 Another solarized color theme for truecolor vim.
-![Screenshot]()
+![Screenshot]("./screenshot/neosolarized-terminal.jpg")
 Fork from [vim-colors-solarized](), Featrues:
 - truecolor support for neovim/vim terminal
 - Neomake signs support
@@ -25,7 +25,8 @@ cd NeoSolarized/colors
 mv NeoSolarized.vim ~/.vim/colors/
 ```
 #### By Plugin managers
-[vim-plug]()
-`Plug 'iCyMind/NeoSolarized'`
+[vim-plug](https://github.com/junegunn/vim-plu://github.com/junegunn/vim-plug):
+- add `Plug 'iCyMind/NeoSolarized'` to your init.vim or .vimrc file
+- run `:PluginInstall` after resource/relaunch
 
 ### Screenshot
