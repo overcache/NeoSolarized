@@ -1,4 +1,0 @@
-- VertSplit didn't take guifg/guibg unless cterm set to NONE.
-- V mode in terminal did not hi cursor line(occur in vim)
-- solarized/solarized8 works well in appleterminal with "set notermguicolors"
-- solarized/solarized8/neosolarized do not work in iterm(with and without tmux)

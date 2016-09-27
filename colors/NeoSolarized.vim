@@ -450,8 +450,7 @@ exe "let s:fmt_revb     = ' "   .   "gui=NONE".s:r.s:b  .   " cterm=NONE".s:r.s:
 exe "let s:fmt_revbb    = ' "   .   "gui=NONE".s:r.s:bb     .   " cterm=NONE".s:r.s:bb      .   "'"
 exe "let s:fmt_revbbu   = ' "   .   "gui=NONE".s:r.s:bb.s:u .   " cterm=NONE".s:r.s:bb.s:u  .   "'"
 
-" if has("gui_running")
-if has("termguicolors") && &termguicolors
+if has("gui_running") || has("termguicolors") && &termguicolors
     exe "let s:sp_none      = ' guisp="     .       s:gui_none      .   "'"
     exe "let s:sp_back      = ' guisp="     .       s:gui_back      .   "'"
     exe "let s:sp_base03    = ' guisp="     .       s:gui_base03    .   "'"
@@ -584,9 +583,9 @@ exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
 " if ( has("gui_running") || &t_Co > 8 )
-    exe "hi! VertSplit"  ." gui=NONE "   ."guifg=".s:gui_base00 ." guibg=".s:gui_base00
+    " exe "hi! VertSplit"  ." gui=NONE "   ."guifg=".s:gui_base00 ." guibg=".s:gui_base00
     " exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_base00
-    " exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_none
+    exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_none
 " else
     " exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base00 .s:bg_base02
 " endif
@@ -1103,5 +1102,5 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 " OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 " THE SOFTWARE.
 "
-" vim:foldmethod=marker:foldlevel=0
+" vim: set foldmethod=marker foldlevel=0:
 "}}}
