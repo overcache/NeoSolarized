@@ -1083,7 +1083,7 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 " ---------------------------------------------------------------------
 "
 " Copyright (c) 2011 Ethan Schoonover
-" Copyright (c) 2015 iCyMind
+" Copyright (c) 2016 iCyMind
 "
 " Permission is hereby granted, free of charge, to any person obtaining a copy
 " of this software and associated documentation files (the "Software"), to deal
