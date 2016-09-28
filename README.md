@@ -10,7 +10,11 @@ Fork from [vim-colors-solarized](), Featrues:
 ### Requirements
 - [terminal](https://gist.github.com/XVilka/8346728) which support truecolor
 - neovim or Gvim/MacVim or vim ≥ 7.4.1799
-- `set termguicolors` in your init.vim/.vimrc
+- add the line below to your init.vim/.vimrc
+
+    ```vim
+    set termguicolors
+    ```
 
 ### Installation
 - Manual install  
@@ -52,6 +56,10 @@ Currently, vim can not work well in tmux. But neovim works perfect.
 If you meet a color issue when using tmux. Make sure:
 - using lastest tmux (v2.2)
 - your $TERM variable set to "xterm-256color"
-- add `set-option -ga terminal-overrides ",xterm-256color:Tc"` to your .tmux.conf file.
+- add the line below  to your .tmux.conf file.
+
+    ```tmux
+    set-option -ga terminal-overrides ",xterm-256color:Tc"
+    ```
 
 see this [article](https://deductivelabs.com/en/2016/03/using-true-color-vim-tmux/) for more tmux detail.
