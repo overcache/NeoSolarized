@@ -39,39 +39,20 @@ When installtation is done, config it as your colorscheme, put in your init.vim 
 colorscheme NeoSolarized
 ```
 ## Options
-Same options as origin solarized(remove solarized_menu option), rename the option name to avoid config conflict. Make sure put those lines before "colorscheme NeoSolarized" in init.vim / .vimrc
+Remove some options of origin solarized, rename options name to avoid config conflict. Make sure put those lines before "colorscheme NeoSolarized" in init.vim / .vimrc
 
-- g:neosolarized_contrast
+```vim
+# default value is "normal", Setting this option to "high" or "low" does use the same Solarized palette but simply shifts some values up or down in order to expand or compress the tonal range displayed.
+let g:neosolarized_contrast = "normal"
 
-    'high'/'low'/'normal'(default)
+# Special characters such as trailing whitespace, tabs, newlines, when displayed using ":set list" can be set to one of three levels depending on your needs. Default value is "normal". Provide "high" and "low" options.
+let g:neosolarized_visibility = "normal"
 
-- g:neosolarized_visibility
-
-    'high'/'low'/'normal'(default)
-
-- g:neosolarized_diffmode
-
-    'high'/'low'/'normal'(default)
-
-- g:neosolarized_bold
-
-    0/1(default)
-
-- g:neosolarized_underline
-
-    0/1(default)
-
-- g:neosolarized_hitrail
-
-    1/0(default)
-
-- g:neosolarized_italic
-
-    1/0(default)
-
-- g:neosolarized_termtrans
-
-    1/0(default)
+# If you wish to stop Solarized from displaying bold, underlined or italicized typefaces, simply assign a zero value to the appropriate variable, for example: let g:solarized_italic=0
+let g:neosolarized_bold = 1
+let g:neosolarized_underline = 1
+let g:neosolarized_italic = 0
+```
 
 ## More info
 ### Plugins which use in the screenshot
@@ -82,7 +63,7 @@ Same options as origin solarized(remove solarized_menu option), rename the optio
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 
-### truecolor test
+### Truecolor test
 You can run this scrip to test if your terminal has support. If the colors smoothly blend, then you know that you have True Color support.
 ```bash
 awk 'BEGIN{
@@ -99,7 +80,7 @@ awk 'BEGIN{
     printf "\n";
 }'
 ```
-### tmux
+### Tmux
 Currently, vim can not work well in tmux. But neovim works perfect.  
 If you meet a color issue when using tmux. Make sure:
 - using lastest tmux (v2.2)
