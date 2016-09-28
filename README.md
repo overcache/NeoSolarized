@@ -1,7 +1,7 @@
 # NeoSolarized
-Another solarized color theme for truecolor vim.
+Another solarized color theme for truecolor neovim / vim.
 ![Screenshot](http://ww3.sinaimg.cn/large/5d4db8f9gw1f88o0e8r6mj21kw11hqcx.jpg)
-Fork from [vim-colors-solarized](), Featrues:
+Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized), Featrues:
 - truecolor support for neovim/vim terminal
 - [Neomake](https://github.com/neomake/neomake) signs support
 - [gitgutter](https://github.com/airblade/vim-gitgutter) signs support
@@ -24,7 +24,7 @@ Move NeoSolarized.vim to your vim RunTimePath directory:
     cd NeoSolarized/colors
     mv NeoSolarized.vim ~/.config/nvim/colors/
     ```
-    or
+    or for vim
     ```bash
     cd NeoSolarized/colors
     mv NeoSolarized.vim ~/.vim/colors/
@@ -32,6 +32,41 @@ Move NeoSolarized.vim to your vim RunTimePath directory:
 - Plugin managers: [vim-plug](https://github.com/junegunn/vim-plu://github.com/junegunn/vim-plug):
     - add `Plug 'iCyMind/NeoSolarized'` to your init.vim or .vimrc file
     - run `:PluginInstall` after resource/relaunch
+
+### Options
+Same options as origin solarized, but rename the option name to avoid config conflit.
+
+- g:neosolarized_contrast
+
+    'high'/'low'/'normal'(default)
+
+- g:neosolarized_visibility
+
+    'high'/'low'/'normal'(default)
+
+- g:neosolarized_diffmode
+
+    'high'/'low'/'normal'(default)
+
+- g:neosolarized_bold
+
+    0/1(default)
+
+- g:neosolarized_underline
+
+    0/1(default)
+
+- g:neosolarized_hitrail
+
+    1/0(default)
+
+- g:neosolarized_italic
+
+    1/0(default)
+
+- g:neosolarized_termtrans
+
+    1/0(default)
 
 ### Info
 ##### truecolor test
