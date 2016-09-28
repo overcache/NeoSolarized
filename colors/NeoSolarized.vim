@@ -881,25 +881,6 @@ exe "hi! NeomakeNeomakeInfoSign"    . s:fg_green    .s:bg_none   .s:fmt_none
 autocmd GUIEnter * if (has('gui_running')) | exe "colorscheme " . g:colors_name | endif
 "}}}
 
-" Highlight Trailing Space {{{
-" Experimental: Different highlight when on cursorline
-function! s:NeoSolarizedHiTrail()
-    if g:neosolarized_hitrail==0
-        hi! clear solarizedTrailingSpace
-    else
-        syn match neoSolarizedTrailingSpace "\s*$"
-        exe "hi! neoSolarizedTrailingSpace " .s:fmt_undr .s:fg_red .s:bg_none .s:sp_red
-    endif
-endfunction
-augroup NeoSolarizedHiTrail
-    autocmd!
-    if g:neosolarized_hitrail==1
-        autocmd! Syntax * call s:NeoSolarizedHiTrail()
-        autocmd! ColorScheme * if g:colors_name == "NeoSolarized" | call s:NeoSolarizedHiTrail() | else | augroup! s:NeoSolarizedHiTrail | endif
-    endif
-augroup END
-" }}}
-
 " License "{{{
 " ---------------------------------------------------------------------
 "
