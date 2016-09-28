@@ -73,7 +73,15 @@ Same options as origin solarized(remove solarized_menu option), rename the optio
 
     1/0(default)
 
-### Info
+### More info
+##### Plugins which use in the screenshot
+
+- [NERDTree](https://github.com/scrooloose/nerdtre://github.com/scrooloose/nerdtree)
+- [vim-airline](https://github.com/vim-airline/vim-airline)
+- [neomake](https://github.com/neomake/neomak://github.com/neomake/neomake)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [vim-signature](https://github.com/kshenoy/vim-signature)
+
 ##### truecolor test
 You can run this scrip to test if your terminal has support. If the colors smoothly blend, then you know that you have True Color support.
 ```bash
