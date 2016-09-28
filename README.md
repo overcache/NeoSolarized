@@ -34,7 +34,7 @@ Move NeoSolarized.vim to your vim RunTimePath directory:
     - run `:PluginInstall` after resource/relaunch
 
 ### Options
-Same options as origin solarized, but rename the option name to avoid config conflit.
+Same options as origin solarized(remove solarized_menu option), rename the option name to avoid config conflict. Make sure put those lines before "colorscheme NeoSolarized" in init.vim / .vimrc
 
 - g:neosolarized_contrast
 
@@ -91,7 +91,7 @@ Currently, vim can not work well in tmux. But neovim works perfect.
 If you meet a color issue when using tmux. Make sure:
 - using lastest tmux (v2.2)
 - your $TERM variable set to "xterm-256color"
-- add the line below  to your .tmux.conf file.
+- add the line below to your .tmux.conf file.
 
     ```tmux
     set-option -ga terminal-overrides ",xterm-256color:Tc"
