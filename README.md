@@ -7,7 +7,7 @@ Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solar
 - [gitgutter](https://github.com/airblade/vim-gitgutter) signs support
 - [signature](https://github.com/kshenoy/vim-signature) signs support
 
-### Requirements
+## Requirements
 - [terminal](https://gist.github.com/XVilka/8346728) which support truecolor
 - neovim or Gvim/MacVim or vim ≥ 7.4.1799
 - add the line below to your init.vim/.vimrc
@@ -16,7 +16,7 @@ Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solar
     set termguicolors
     ```
 
-### Installation
+## Installation
 - Manual install  
 Move NeoSolarized.vim to your vim RunTimePath directory:
 
@@ -38,7 +38,7 @@ When installtation is done, config it as your colorscheme, put in your init.vim 
 ```vim
 colorscheme NeoSolarized
 ```
-### Options
+## Options
 Same options as origin solarized(remove solarized_menu option), rename the option name to avoid config conflict. Make sure put those lines before "colorscheme NeoSolarized" in init.vim / .vimrc
 
 - g:neosolarized_contrast
@@ -73,8 +73,8 @@ Same options as origin solarized(remove solarized_menu option), rename the optio
 
     1/0(default)
 
-### More info
-##### Plugins which use in the screenshot
+## More info
+### Plugins which use in the screenshot
 
 - [NERDTree](https://github.com/scrooloose/nerdtre://github.com/scrooloose/nerdtree)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
@@ -82,7 +82,7 @@ Same options as origin solarized(remove solarized_menu option), rename the optio
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 
-##### truecolor test
+### truecolor test
 You can run this scrip to test if your terminal has support. If the colors smoothly blend, then you know that you have True Color support.
 ```bash
 awk 'BEGIN{
@@ -99,7 +99,7 @@ awk 'BEGIN{
     printf "\n";
 }'
 ```
-#### tmux
+### tmux
 Currently, vim can not work well in tmux. But neovim works perfect.  
 If you meet a color issue when using tmux. Make sure:
 - using lastest tmux (v2.2)
