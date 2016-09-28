@@ -112,6 +112,7 @@
 " Terminals that support italics
 let s:terms_italic=[
             \"rxvt",
+            \"pantheon-terminal",
             \"gnome-terminal"
             \]
 " For reference only, terminals are known to be incomptible.
