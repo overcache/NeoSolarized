@@ -86,8 +86,17 @@ awk 'BEGIN{
 }'
 ```
 ### Tmux
-Currently, vim can not work well in tmux. But neovim works perfect.  
-If you meet a color issue when using tmux. Make sure:
+You may need same hack to make vim works well in tmux. Put this lines to your .vimrc:  
+```vim
+set t_8f=^[[38;2;%lu;%lu;%lum
+set t_8b=^[[48;2;%lu;%lu;%lum
+```
+The '^[' represent the escape char. You should press <Ctrl-v><Esc> to input actual escape. If the ^[ is two characters (^ and [), it's wrong. If it is one character, it's okay. When you delete the character with backspace, you will find that ^[ is deleted at once. Please also check
+:help c_CTRL-V (and :help i_CTRL-V).
+check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more infomation.
+
+
+neovim works perfect without this config.  If you meet a color issue when using tmux. Make sure:  
 - using lastest tmux (v2.2)
 - your $TERM variable set to "xterm-256color"
 - add the line below to your .tmux.conf file.
