@@ -105,35 +105,6 @@
 "
 " }}}
 
-" Environment Specific Overrides "{{{
-" Allow or disallow certain features based on current terminal emulator or 
-" environment.
-
-" Terminals that support italics
-let s:terms_italic=[
-            \"rxvt",
-            \"pantheon-terminal",
-            \"gnome-terminal"
-            \]
-" For reference only, terminals are known to be incomptible.
-" Terminals that are in neither list need to be tested.
-let s:terms_noitalic=[
-            \"iTerm.app",
-            \"Apple_Terminal"
-            \]
-if has("gui_running")
-    let s:terminal_italic=1 " TODO: could refactor to not require this at all
-else
-    let s:terminal_italic=0 " terminals will be guilty until proven compatible
-    for term in s:terms_italic
-        if $TERM_PROGRAM =~ term
-            let s:terminal_italic=1
-        endif
-    endfor
-endif
-
-" }}}
-
 " Default option values"{{{
 " ---------------------------------------------------------------------
 
@@ -302,7 +273,7 @@ else
     let s:u           = ",underline"
 endif
 
-if g:neosolarized_italic == 0 || s:terminal_italic == 0
+if g:neosolarized_italic == 0
     let s:i           = ""
 else
     let s:i           = ",italic"
