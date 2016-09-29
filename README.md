@@ -53,10 +53,10 @@ let g:neosolarized_contrast = "normal"
 let g:neosolarized_visibility = "normal"
 
 " If you wish to enable/disable NeoSolarized from displaying bold, underlined or italicized 
-" typefaces, simply assign 1 or 0 to the appropriate variable.
+" typefaces, simply assign 1 or 0 to the appropriate variable. Default values:  
 let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
-let g:neosolarized_italic = 0
+let g:neosolarized_italic = 1
 ```
 
 ## More info

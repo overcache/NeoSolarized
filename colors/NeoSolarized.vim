@@ -113,7 +113,7 @@ let g:neosolarized_visibility = get(g:, "neosolarized_visibility", "normal")
 let g:neosolarized_diffmode = get(g:, "neosolarized_diffmode", "normal")
 let g:neosolarized_bold = get(g:, "neosolarized_bold", 1)
 let g:neosolarized_underline = get(g:, "neosolarized_underline", 1)
-let g:neosolarized_italic = get(g:, "neosolarized_italic", 0)
+let g:neosolarized_italic = get(g:, "neosolarized_italic", 1)
 let g:neosolarized_termtrans = get(g:, "neosolarized_termtrans", 0)
 
 "}}}
