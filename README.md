@@ -1,8 +1,9 @@
 # NeoSolarized
 Another solarized color theme for truecolor neovim / vim.
-![Screenshot](http://ww3.sinaimg.cn/large/5d4db8f9gw1f88o0e8r6mj21kw11hqcx.jpg)
+![Screenshot-dark](http://ww3.sinaimg.cn/large/5d4db8f9gw1f88o0e8r6mj21kw11hqcx.jpg)
+![Screenshot-light](http://ww3.sinaimg.cn/large/5d4db8f9gw1f8bkj8fnghj21kw11n7et.jpg)
 Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized), Featrues:
-- truecolor support for neovim/vim terminal
+- truecolor support for neovim/vim terminal, and works well in Gvim/MacVim certainly.
 - [Neomake](https://github.com/neomake/neomake) signs support
 - [gitgutter](https://github.com/airblade/vim-gitgutter) signs support
 - [signature](https://github.com/kshenoy/vim-signature) signs support
@@ -93,7 +94,7 @@ set t_8b=^[[48;2;%lu;%lu;%lum
 ```
 The '^[' represent the escape char. You should press <kbd>Ctrl-v</kbd> + <kbd>Esc</kbd> to input actual escape. If the ^[ is two characters (^ and [), it's wrong. If it is one character, it's okay. When you delete the character with backspace, you will find that ^[ is deleted at once. Please also check
 :help c_CTRL-V (and :help i_CTRL-V).
-check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more infomation.
+check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more information.
 
 
 neovim works perfect without this config.  If you meet a color issue when using tmux. Make sure:  
