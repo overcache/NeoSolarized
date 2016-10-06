@@ -70,7 +70,9 @@ let g:neosolarized_italic = 1
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 
 ### Truecolor test
-You can run this scrip to test if your terminal has support. If the colors smoothly blend, then you know that you have True Color support.
+You can run this scrip to test if your terminal has support. If the colors smoothly blend like:
+![truecolor](http://ww3.sinaimg.cn/large/5d4db8f9gw1f8inp80my1j20h907daba.jpg)
+Then you know that you have True Color support.
 ```bash
 awk 'BEGIN{
     s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
