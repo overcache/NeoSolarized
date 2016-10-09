@@ -329,7 +329,7 @@ exe "let s:fmt_undb     = ' "   .   "gui=NONE".s:u.s:b  .   " cterm=NONE".s:u.s:
 exe "let s:fmt_undi     = ' "   .   "gui=NONE".s:u      .   " cterm=NONE".s:u       .   "'"
 exe "let s:fmt_uopt     = ' "   .   "gui=NONE".s:ou     .   " cterm=NONE".s:ou      .   "'"
 exe "let s:fmt_curl     = ' "   .   "gui=NONE".s:c      .   " cterm=NONE".s:c       .   "'"
-exe "let s:fmt_ital     = ' "   .   "gui=NONE".s:i      .   " cterm=NONE".s:i       .   "'"
+exe "let s:fmt_ital     = ' "   .   "gui=NONE".s:i      .   " cterm=NONE"           .   "'"
 exe "let s:fmt_stnd     = ' "   .   "gui=NONE".s:s      .   " cterm=NONE".s:s       .   "'"
 exe "let s:fmt_revr     = ' "   .   "gui=NONE".s:r      .   " cterm=NONE".s:r       .   "'"
 exe "let s:fmt_revb     = ' "   .   "gui=NONE".s:r.s:b  .   " cterm=NONE".s:r.s:b   .   "'"
