@@ -30,7 +30,7 @@ Move NeoSolarized.vim to your vim RunTimePath directory:
     cd NeoSolarized/colors
     mv NeoSolarized.vim ~/.vim/colors/
     ```
-- Plugin managers: [vim-plug](https://github.com/junegunn/vim-plu://github.com/junegunn/vim-plug):
+- Plugin managers: [vim-plug](https://github.com/junegunn/vim-plug):
     - add `Plug 'iCyMind/NeoSolarized'` to your init.vim or .vimrc file
     - run `:PluginInstall` after resource/relaunch
 
@@ -63,9 +63,9 @@ let g:neosolarized_italic = 1
 ## More info
 ### Plugins which use in the screenshot
 
-- [NERDTree](https://github.com/scrooloose/nerdtre://github.com/scrooloose/nerdtree)
+- [NERDTree](https://github.com/scrooloose/nerdtree)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
-- [neomake](https://github.com/neomake/neomak://github.com/neomake/neomake)
+- [neomake](https://github.com/neomake/neomake)
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 
