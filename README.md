@@ -66,7 +66,7 @@ let g:neosolarized_italic = 1
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [neomake](https://github.com/neomake/neomake)
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)(make sure you have: `let g:gitgutter_override_sign_column_highlight = 0` in your init.vim/.vimrc)
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 
 ### Truecolor test
