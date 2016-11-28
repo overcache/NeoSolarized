@@ -2,16 +2,16 @@
 Another solarized color theme for truecolor neovim / vim.
 ![Screenshot-dark](http://ww3.sinaimg.cn/large/5d4db8f9gw1f88o0e8r6mj21kw11hqcx.jpg)
 ![Screenshot-light](http://ww3.sinaimg.cn/large/5d4db8f9gw1f8bkj8fnghj21kw11n7et.jpg)
-Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized), Featrues:
-- truecolor support for neovim/vim terminal, and works well in Gvim/MacVim certainly.
+Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized), Features:
+- truecolor support for neovim/vim terminal, and works well in Gvim/MacVim.
 - [Neomake](https://github.com/neomake/neomake) signs support
 - [gitgutter](https://github.com/airblade/vim-gitgutter) signs support
 - [signature](https://github.com/kshenoy/vim-signature) signs support
 
 ## Requirements
-- [terminal](https://gist.github.com/XVilka/8346728) which support truecolor
+- A [terminal](https://gist.github.com/XVilka/8346728) which supports truecolor
 - neovim or Gvim/MacVim or vim ≥ 7.4.1799
-- add the line below to your init.vim/.vimrc
+- The following line in your `init.vim` or `.vimrc` file:
 
     ```vim
     set termguicolors
@@ -31,16 +31,16 @@ Move NeoSolarized.vim to your vim RunTimePath directory:
     mv NeoSolarized.vim ~/.vim/colors/
     ```
 - Plugin managers: [vim-plug](https://github.com/junegunn/vim-plug):
-    - add `Plug 'iCyMind/NeoSolarized'` to your init.vim or .vimrc file
-    - run `:PluginInstall` after resource/relaunch
+    - Add `Plug 'iCyMind/NeoSolarized'` to your `init.vim` or `.vimrc` file.
+    - Run `:PluginInstall` after resourcing/relaunching.
 
-When installtation is done, config it as your colorscheme, put in your init.vim / .vimrc:
-
+After the installation, configure it as your colorscheme by putting the following line into your `init.vim` or `.vimrc` file:
 ```vim
 colorscheme NeoSolarized
 ```
 ## Options
-Remove some options of origin solarized, rename options name to avoid config conflict. Make sure put those lines before "colorscheme NeoSolarized" in init.vim / .vimrc
+Some options of the original solarized theme were removed or renamed to avoid config conflicts.
+Make sure to put configuration before the line `colorscheme NeoSolarized` in `init.vim` or `.vimrc`.
 
 ```vim
 " default value is "normal", Setting this option to "high" or "low" does use the 
@@ -60,17 +60,24 @@ let g:neosolarized_underline = 1
 let g:neosolarized_italic = 1
 ```
 
+To enable the dark version of the theme add the line
+```vim
+set background=dark
+```
+For more information check out the documentation in `NeoSolarized.vim`.
+
+
 ## More info
-### Plugins which use in the screenshot
+### Plugins used in the screenshot
 
 - [NERDTree](https://github.com/scrooloose/nerdtree)
 - [vim-airline](https://github.com/vim-airline/vim-airline)
 - [neomake](https://github.com/neomake/neomake)
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)(make sure you have: `let g:gitgutter_override_sign_column_highlight = 0` in your init.vim/.vimrc)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter) (make sure you have: `let g:gitgutter_override_sign_column_highlight = 0` in your init.vim/.vimrc)
 - [vim-signature](https://github.com/kshenoy/vim-signature)
 
 ### Truecolor test
-You can run this scrip to test if your terminal has support. If the colors smoothly blend like: ![colortest](http://ww3.sinaimg.cn/large/5d4db8f9gw1f8into8gvgj20hf00o0sv.jpg), then you know that you have True Color support.
+You can run this script to test if your terminal is supported. If the colors blend smoothly like: ![colortest](http://ww3.sinaimg.cn/large/5d4db8f9gw1f8into8gvgj20hf00o0sv.jpg), then you know that you have True Color support.
 ```bash
 awk 'BEGIN{
     s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
@@ -87,7 +94,7 @@ awk 'BEGIN{
 }'
 ```
 ### Tmux
-You may need same hack to make vim works well in tmux. Put this lines to your .vimrc:  
+You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:  
 ```vim
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
@@ -97,13 +104,13 @@ The '^[' represent the escape char. You should press <kbd>Ctrl-v</kbd> + <kbd>Es
 check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more information.
 
 
-neovim works perfect without this config.  If you meet a color issue when using tmux. Make sure:  
-- using lastest tmux (v2.2)
-- your $TERM variable set to "xterm-256color"
-- add the line below to your .tmux.conf file.
+neovim works perfect without this config.  If you encounter a color issue using tmux, make sure that:  
+- you are using the latest version of tmux (v2.2)
+- your $TERM variable is set to "xterm-256color"
+- add the line below to your .tmux.conf file:
 
     ```tmux
     set-option -ga terminal-overrides ",xterm-256color:Tc"
     ```
 
-see this [article](https://deductivelabs.com/en/2016/03/using-true-color-vim-tmux/) for more tmux detail.
+See this [article](https://deductivelabs.com/en/2016/03/using-true-color-vim-tmux/) for more details on tmux.
