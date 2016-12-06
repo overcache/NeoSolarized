@@ -822,7 +822,7 @@ hi! link pandocMetadataTitle             pandocMetadata
 
 "}}}
 
-" perl highlighting "{{{
+" neomake highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! NeomakeErrorSign"          . s:fg_orange   .s:bg_none   .s:fmt_none
 exe "hi! NeomakeWarningSign"        . s:fg_yellow   .s:bg_none   .s:fmt_none
