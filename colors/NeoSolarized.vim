@@ -523,27 +523,27 @@ exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base01
 "exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
 "hi! link vimComment Comment
 "hi! link vimLineComment Comment
-hi! link vimVar Identifier
-hi! link vimFunc Function
-hi! link vimUserFunc Function
-hi! link helpSpecial Special
-hi! link vimSet Normal
-hi! link vimSetEqual Normal
-exe "hi! vimCommentString"  .s:fmt_none    .s:fg_violet .s:bg_none
-exe "hi! vimCommand"        .s:fmt_none    .s:fg_yellow .s:bg_none
-exe "hi! vimCmdSep"         .s:fmt_bold    .s:fg_blue   .s:bg_none
-exe "hi! helpExample"       .s:fmt_none    .s:fg_base1  .s:bg_none
-exe "hi! helpOption"        .s:fmt_none    .s:fg_cyan   .s:bg_none
-exe "hi! helpNote"          .s:fmt_none    .s:fg_magenta.s:bg_none
-exe "hi! helpVim"           .s:fmt_none    .s:fg_magenta.s:bg_none
-exe "hi! helpHyperTextJump" .s:fmt_undr    .s:fg_blue   .s:bg_none
-exe "hi! helpHyperTextEntry".s:fmt_none    .s:fg_green  .s:bg_none
-exe "hi! vimIsCommand"      .s:fmt_none    .s:fg_base00 .s:bg_none
-exe "hi! vimSynMtchOpt"     .s:fmt_none    .s:fg_yellow .s:bg_none
-exe "hi! vimSynType"        .s:fmt_none    .s:fg_cyan   .s:bg_none
-exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blue   .s:bg_none
-exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blue   .s:bg_none
-exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
+" hi! link vimVar Identifier
+" hi! link vimFunc Function
+" hi! link vimUserFunc Function
+" hi! link helpSpecial Special
+" hi! link vimSet Normal
+" hi! link vimSetEqual Normal
+" exe "hi! vimCommentString"  .s:fmt_none    .s:fg_violet .s:bg_none
+" exe "hi! vimCommand"        .s:fmt_none    .s:fg_yellow .s:bg_none
+" exe "hi! vimCmdSep"         .s:fmt_bold    .s:fg_blue   .s:bg_none
+" exe "hi! helpExample"       .s:fmt_none    .s:fg_base1  .s:bg_none
+" exe "hi! helpOption"        .s:fmt_none    .s:fg_cyan   .s:bg_none
+" exe "hi! helpNote"          .s:fmt_none    .s:fg_magenta.s:bg_none
+" exe "hi! helpVim"           .s:fmt_none    .s:fg_magenta.s:bg_none
+" exe "hi! helpHyperTextJump" .s:fmt_undr    .s:fg_blue   .s:bg_none
+" exe "hi! helpHyperTextEntry".s:fmt_none    .s:fg_green  .s:bg_none
+" exe "hi! vimIsCommand"      .s:fmt_none    .s:fg_base00 .s:bg_none
+" exe "hi! vimSynMtchOpt"     .s:fmt_none    .s:fg_yellow .s:bg_none
+" exe "hi! vimSynType"        .s:fmt_none    .s:fg_cyan   .s:bg_none
+" exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blue   .s:bg_none
+" exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blue   .s:bg_none
+" exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
 "}}}
 
 " diff highlighting "{{{
