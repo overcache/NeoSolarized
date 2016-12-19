@@ -115,6 +115,7 @@ let g:neosolarized_bold = get(g:, "neosolarized_bold", 1)
 let g:neosolarized_underline = get(g:, "neosolarized_underline", 1)
 let g:neosolarized_italic = get(g:, "neosolarized_italic", 1)
 let g:neosolarized_termtrans = get(g:, "neosolarized_termtrans", 0)
+let g:neosolarized_vertSplitBgTrans = get(g:, "neosolarized_vertSplitBgTrans", 1)
 
 "}}}
 
@@ -333,8 +334,8 @@ exe "let s:fmt_ital     = ' "   .   "gui=NONE".s:i      .   " cterm=NONE".s:i   
 exe "let s:fmt_stnd     = ' "   .   "gui=NONE".s:s      .   " cterm=NONE".s:s       .   "'"
 exe "let s:fmt_revr     = ' "   .   "gui=NONE".s:r      .   " cterm=NONE".s:r       .   "'"
 exe "let s:fmt_revb     = ' "   .   "gui=NONE".s:r.s:b  .   " cterm=NONE".s:r.s:b   .   "'"
-" revbb (reverse bold for bright colors) is only set to actual bold in low 
-" color terminals (t_co=8, such as OS X Terminal.app) and should only be used 
+" revbb (reverse bold for bright colors) is only set to actual bold in low
+" color terminals (t_co=8, such as OS X Terminal.app) and should only be used
 " with colors 8-15.
 exe "let s:fmt_revbb    = ' "   .   "gui=NONE".s:r.s:bb     .   " cterm=NONE".s:r.s:bb      .   "'"
 exe "let s:fmt_revbbu   = ' "   .   "gui=NONE".s:r.s:bb.s:u .   " cterm=NONE".s:r.s:bb.s:u  .   "'"
@@ -471,7 +472,11 @@ exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
-exe "hi! VertSplit"      .s:fmt_none   .s:fg_base00 .s:bg_none
+if (g:neosolarized_vertSplitBgTrans == 1)
+    exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_none
+else
+    exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_base00
+endif
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
 exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
@@ -574,7 +579,7 @@ hi! link diffLine Identifier
 "exe "hi! gitDiffAdded"
 "exe "hi! gitDiffRemoved"
 "gitcommit
-"exe "hi! gitcommitSummary"      
+"exe "hi! gitcommitSummary"
 exe "hi! gitcommitComment"      .s:fmt_ital     .s:fg_base01    .s:bg_none
 hi! link gitcommitUntracked gitcommitComment
 hi! link gitcommitDiscarded gitcommitComment
@@ -853,19 +858,19 @@ let g:terminal_color_15 = s:gui_base3
 
 " Utility autocommand "{{{
 " ---------------------------------------------------------------------
-" In cases where Solarized is initialized inside a terminal vim session and 
-" then transferred to a gui session via the command `:gui`, the gui vim process 
-" does not re-read the colorscheme (or .vimrc for that matter) so any `has_gui` 
+" In cases where Solarized is initialized inside a terminal vim session and
+" then transferred to a gui session via the command `:gui`, the gui vim process
+" does not re-read the colorscheme (or .vimrc for that matter) so any `has_gui`
 " related code that sets gui specific values isn't executed.
 "
-" Currently, Solarized sets only the cterm or gui values for the colorscheme 
-" depending on gui or terminal mode. It's possible that, if the following 
-" autocommand method is deemed excessively poor form, that approach will be 
+" Currently, Solarized sets only the cterm or gui values for the colorscheme
+" depending on gui or terminal mode. It's possible that, if the following
+" autocommand method is deemed excessively poor form, that approach will be
 " used again and the autocommand below will be dropped.
 "
-" However it seems relatively benign in this case to include the autocommand 
-" here. It fires only in cases where vim is transferring from terminal to gui 
-" mode (detected with the script scope s:vmode variable). It also allows for 
+" However it seems relatively benign in this case to include the autocommand
+" here. It fires only in cases where vim is transferring from terminal to gui
+" mode (detected with the script scope s:vmode variable). It also allows for
 " other potential terminal customizations that might make gui mode suboptimal.
 "
 autocmd GUIEnter * if (has('gui_running')) | exe "colorscheme " . g:colors_name | endif
