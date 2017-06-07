@@ -516,7 +516,7 @@ exe "hi! TabLineFill"    .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
 exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revbbu
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
-exe "hi! CursorLineNr"     .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
+exe "hi! CursorLineNr"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! Cursor"         .s:fmt_none   .s:fg_base03 .s:bg_base0
 hi! link lCursor Cursor
@@ -836,6 +836,20 @@ exe "hi! NeomakeMessageSign"        . s:fg_cyan     .s:bg_none   .s:fmt_none
 exe "hi! NeomakeNeomakeInfoSign"    . s:fg_green    .s:bg_none   .s:fmt_none
 
 "}}}
+
+" gitgutter highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! GitGutterAdd"              . s:fg_green    .s:bg_none  .s:fmt_none
+exe "hi! GitGutterChange"           . s:fg_yellow   .s:bg_none  .s:fmt_none
+exe "hi! GitGutterDelete"           . s:fg_red      .s:bg_none  .s:fmt_none
+exe "hi! GitGutterChangeDelete"     . s:fg_red      .s:bg_none  .s:fmt_none
+" }}}"
+
+" ALE highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! ALEErrorSign"          . s:fg_orange   .s:bg_none   .s:fmt_none
+exe "hi! ALEWarningSign"        . s:fg_yellow   .s:bg_none   .s:fmt_none
+" }}}"
 
 " NeoVim terminal buffer colours "{{{
 " ---------------------------------------------------------------------

@@ -4,9 +4,8 @@ Another solarized color theme for truecolor neovim / vim.
 ![Screenshot-light](http://ww3.sinaimg.cn/large/5d4db8f9gw1f8bkj8fnghj21kw11n7et.jpg)
 Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized), Features:
 - truecolor support for neovim/vim terminal, and works well in Gvim/MacVim.
-- [Neomake](https://github.com/neomake/neomake) signs support
-- [gitgutter](https://github.com/airblade/vim-gitgutter) signs support
-- [signature](https://github.com/kshenoy/vim-signature) signs support
+- define color for neovim's embed terminal.
+- define color for [Neomake](https://github.com/neomake/neomake), [GitGutter](https://github.com/airblade/vim-gitgutter), [ALE](https://github.com/w0rp/ale)
 
 ## Requirements
 - A [terminal](https://gist.github.com/XVilka/8346728) which supports truecolor
