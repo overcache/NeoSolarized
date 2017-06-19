@@ -31,7 +31,7 @@ Move NeoSolarized.vim to your vim RunTimePath directory:
     ```
 - Plugin managers: [vim-plug](https://github.com/junegunn/vim-plug):
     - Add `Plug 'iCyMind/NeoSolarized'` to your `init.vim` or `.vimrc` file.
-    - Run `:PluginInstall` after resourcing/relaunching.
+    - Run `:PlugInstall` after resourcing/relaunching.
 
 After the installation, configure it as your colorscheme by putting the following line into your `init.vim` or `.vimrc` file:
 ```vim
