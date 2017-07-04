@@ -845,6 +845,14 @@ exe "hi! GitGutterDelete"           . s:fg_red      .s:bg_none  .s:fmt_none
 exe "hi! GitGutterChangeDelete"     . s:fg_red      .s:bg_none  .s:fmt_none
 " }}}"
 
+" signify highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! SignifySignAdd"            . s:fg_green    .s:bg_none  .s:fmt_none
+exe "hi! SignifySignChange"         . s:fg_yellow   .s:bg_none  .s:fmt_none
+exe "hi! SignifySignDelete"         . s:fg_red      .s:bg_none  .s:fmt_none
+exe "hi! SignifySignChangeDelete"   . s:fg_red      .s:bg_none  .s:fmt_none
+" }}}"
+
 " ALE highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! ALEErrorSign"          . s:fg_orange   .s:bg_none   .s:fmt_none
