@@ -117,4 +117,4 @@ neovim works perfect without this config.  If you encounter a color issue using 
     set-option -ga terminal-overrides ",xterm-256color:Tc"
     ```
 
-See this [article](https://deductivelabs.com/en/2016/03/using-true-color-vim-tmux/) for more details on tmux.
+See this [article](https://deductivelabs.com/en/using-true-color-vim-tmux/) for more details on tmux.
