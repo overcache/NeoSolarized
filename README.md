@@ -100,8 +100,8 @@ awk 'BEGIN{
 ### Tmux
 You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:  
 ```vim
-set t_8f=^[[38;2;%lu;%lu;%lum
-set t_8b=^[[48;2;%lu;%lu;%lum
+set t_8f="^[[38;2;%lu;%lu;%lum"
+set t_8b="^[[48;2;%lu;%lu;%lum"
 ```
 The '^[' represent the escape char. You should press <kbd>Ctrl-v</kbd> + <kbd>Esc</kbd> to input actual escape. If the ^[ is two characters (^ and [), it's wrong. If it is one character, it's okay. When you delete the character with backspace, you will find that ^[ is deleted at once. Please also check
 :help c_CTRL-V (and :help i_CTRL-V).
