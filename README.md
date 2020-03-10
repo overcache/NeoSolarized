@@ -17,7 +17,7 @@ Fork from [vim-colors-solarized](https://github.com/altercation/vim-colors-solar
     ```
 
 ## Installation
-- Manual install  
+- Manual install
 Move NeoSolarized.vim to your vim RunTimePath directory:
 
     ```bash
@@ -42,25 +42,31 @@ Some options of the original solarized theme were removed or renamed to avoid co
 Make sure to put configuration before the line `colorscheme NeoSolarized` in `init.vim` or `.vimrc`.
 
 ```vim
-" default value is "normal", Setting this option to "high" or "low" does use the 
-" same Solarized palette but simply shifts some values up or down in order to 
+" Default value is "normal", Setting this option to "high" or "low" does use the
+" same Solarized palette but simply shifts some values up or down in order to
 " expand or compress the tonal range displayed.
 let g:neosolarized_contrast = "normal"
 
-" Special characters such as trailing whitespace, tabs, newlines, when displayed 
-" using ":set list" can be set to one of three levels depending on your needs. 
+" Special characters such as trailing whitespace, tabs, newlines, when displayed
+" using ":set list" can be set to one of three levels depending on your needs.
 " Default value is "normal". Provide "high" and "low" options.
 let g:neosolarized_visibility = "normal"
 
-" I make vertSplitBar a transparent background color. If you like the origin solarized vertSplitBar
-" style more, set this value to 0.
+" I make vertSplitBar a transparent background color. If you like the origin
+" solarized vertSplitBar style more, set this value to 0.
 let g:neosolarized_vertSplitBgTrans = 1
 
-" If you wish to enable/disable NeoSolarized from displaying bold, underlined or italicized 
-" typefaces, simply assign 1 or 0 to the appropriate variable. Default values:  
+" If you wish to enable/disable NeoSolarized from displaying bold, underlined
+" or italicized" typefaces, simply assign 1 or 0 to the appropriate variable.
+" Default values:
 let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 0
+
+" Used to enable/disable "bold as bright" in Neovim terminal. If colors of bold
+" text output by commands like `ls` aren't what you expect, you might want to
+" try disabling this option. Default value:
+let g:neosolarized_termBoldAsBright = 1
 ```
 
 
@@ -98,7 +104,7 @@ awk 'BEGIN{
 }'
 ```
 ### Tmux
-You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:  
+You may need the same hack to make vim work well in tmux. Put these lines into your .vimrc:
 ```vim
 set t_8f=^[[38;2;%lu;%lu;%lum
 set t_8b=^[[48;2;%lu;%lu;%lum
@@ -108,7 +114,7 @@ The '^[' represent the escape char. You should press <kbd>Ctrl-v</kbd> + <kbd>Es
 check [issue](https://github.com/vim/vim/issues/993#issuecomment-241676971) and [issue](https://github.com/vim/vim/issues/981#issuecomment-242893385) for more information.
 
 
-neovim works perfect without this config.  If you encounter a color issue using tmux, make sure that:  
+neovim works perfect without this config.  If you encounter a color issue using tmux, make sure that:
 - you are using the latest version of tmux (v2.2)
 - your $TERM variable is set to "xterm-256color"
 - add the line below to your .tmux.conf file:
