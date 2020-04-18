@@ -917,7 +917,9 @@ endif
 " mode (detected with the script scope s:vmode variable). It also allows for
 " other potential terminal customizations that might make gui mode suboptimal.
 "
-autocmd GUIEnter * if (has('gui_running')) | exe "colorscheme " . g:colors_name | endif
+if !has('gui_running')
+  autocmd GUIEnter * if (has('gui_running')) | exe "colorscheme " . g:colors_name | endif
+endif
 "}}}
 
 " License "{{{
