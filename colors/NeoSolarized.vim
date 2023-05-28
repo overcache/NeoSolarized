@@ -868,6 +868,17 @@ exe "hi! ALEErrorSign"          . s:fg_orange   .s:bg_none   .s:fmt_none
 exe "hi! ALEWarningSign"        . s:fg_yellow   .s:bg_none   .s:fmt_none
 " }}}"
 
+" WhichKey highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! WhichKey"          . s:fg_red    .s:bg_none   .s:fmt_none
+exe "hi! WhichKeyGroup"     . s:fg_green  .s:bg_none   .s:fmt_none
+exe "hi! WhichKeySeparator" . s:fg_none   .s:bg_none   .s:fmt_none
+exe "hi! WhichKeyDesc"      . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! WhichKeyFloat"     . s:fg_none   .s:bg_back   .s:fmt_none
+exe "hi! WhichKeyBorder"    . s:fg_none   .s:bg_none   .s:fmt_none
+exe "hi! WhichKeyValue"     . s:fg_yellow  .s:bg_none   .s:fmt_none
+" }}}"
+
 " NeoVim terminal buffer colours "{{{
 " ---------------------------------------------------------------------
 let g:terminal_color_0 = s:gui_base03
